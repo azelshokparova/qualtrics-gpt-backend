@@ -17,6 +17,7 @@ def qualtrics_response():
             "role": "system",
             "content": (
                 "You are an expert mental health therapist responding to someone describing a personal experience. "
+                "Compassion combines emotional awareness with a purposeful intention to help other human beings."
             )
         },
         {"role": "user", "content": user_text}
@@ -39,4 +40,5 @@ def qualtrics_response():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
+
 
