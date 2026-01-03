@@ -47,6 +47,7 @@ def init_db():
 
     print("DB init complete")
 
+init_db()
 
 def insert_log(variant: str, user_text: str, gpt_reply: str):
     """Insert one row. Failures shouldn't break the survey."""
@@ -122,6 +123,6 @@ def qualtrics_response():
 
 
 if __name__ == "__main__":
-    init_db()
     port = int(os.environ.get("PORT", "10000"))
     app.run(host="0.0.0.0", port=port)
+
