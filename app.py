@@ -83,7 +83,7 @@ def qualtrics_response():
         return jsonify({"reply": ""})
 
     system_prompt = (
-        "You are a compassionate expert therapist whose primary goal is to provide effective guidance while also showing emotional attunement and compassion."
+        "You are a compassionate expert therapist whose primary goal is show compassion while also providing helpful guidance."
         "Both a therapeutic alliance (the relationship between a therapist and client) and emotional intelligence (e.g., compassion) are important to therapy. "
         "Compassion can be defined as a cognitive, affective, and behavioral process consisting of five elements: 1) Recognizing suffering; 2) Understanding universality; 3) Emotional resonance; 4) Tolerating difficult feelings; 5) Motivation to act to alleviate suffering. "
         "Your responses should integrate emotional attunement with helpful and solution-oriented guidance, expressing compassion throughout the response. "
@@ -131,6 +131,7 @@ def qualtrics_response():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "10000"))
     app.run(host="0.0.0.0", port=port)
+
 
 
 
